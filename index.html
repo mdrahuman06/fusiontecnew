@@ -33,6 +33,7 @@
 </head>
 
 <body class="index-page">
+  
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="index.html" class="logo d-flex align-items-center me-auto">
@@ -52,10 +53,18 @@
           <li><a href="#recent-posts">Blog</a></li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown"><a href="#"><span>Download Brochure</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="assets/brochure/Fusiontec_Software_brochure.pdf" download>Fusiontec Brochure<i class="bi bi-download me-2"></i></a></li>
+              <li><a href="assets/brochure/Supply_chain_brochure.pdf" download>Supplychian Brochure<i class="bi bi-download me-2"></i></a></li>
+              <li><a href="assets/brochure/Order_processing_ERP_brochure.pdf" download>Order_processing_ERP Brochure<i class="bi bi-download me-2"></i></a></li>
+              <li><a href="assets/brochure/Integrated_ERP_brochure.pdf" download>Integrated_ERP Brochure<i class="bi bi-download me-2"></i></a></li>
+            </ul>
+          </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <a class="btn-getstarted" href="assets/brochure/Fusiontec_Software_brochure.pdf" download>Download Brochure</a>
+      <!-- <a class="btn-getstarted" href="assets/brochure/Fusiontec_Software_brochure.pdf" download>Download Brochure</a> -->
     </div>
   </header>
 
@@ -394,64 +403,99 @@
     </section><!-- /Faq Section -->
 
     <!-- Case Study Section -->
-<section id="faq" class="faq section">
-  <!-- Section Title -->
+<section id="faq" class="faq section py-4">
   <div class="container section-title" data-aos="fade-up">
     <h2>Case Study</h2>
     <p>At Fusiontec Software, we have successfully delivered impactful software solutions that address the unique challenges faced by our clients. Here are some of our recent success stories:</p>
-  </div><!-- End Section Title -->
+  </div>
+
   <div class="container">
     <div class="row">
+      <!-- Left Column -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
         <div class="faq-container">
-          <div class="faq-item faq-active">
-            <h3>Case Study 1: Manufacturing Industry – Process Automation</h3>
-            <div class="faq-content">
-              <p><b>Challenge: </b> A mid-sized manufacturing firm faced inefficiencies in production planning and inventory management.</p>
+
+          <!-- Case Study 1 -->
+          <div class="faq-item faq-active mb-4">
+            <div class="d-flex align-items-center mb-2">
+              <button class="btn btn-sm btn-outline-secondary me-2 eye-btn" data-img="assets/img/fusiontec/product-2.jpg" aria-label="Preview Image">
+                <i class="bi bi-eye"></i>
+              </button>
+              <h3 class="mb-0">Case Study 1: Manufacturing Industry – Process Automation</h3>
             </div>
             <div class="faq-content">
-              <p><b>Solution: </b> Developed a custom software solution that automated production schedules, optimized inventory tracking and generated real-time reports.</p> 
+              <p><b>Challenge:</b> A mid-sized manufacturing firm faced inefficiencies in production planning and inventory management.</p>
             </div>
             <div class="faq-content">
-              <p><b>Impact: </b> Production downtime by 30% and increased overall operational efficiency.</p> 
-            </div>
-            <i class="faq-toggle bi bi-chevron-right"></i>
-          </div><!-- End case study item-->
-          <div class="faq-item">
-            <h3>Case Study 2: Retail Sector – Customer Relationship Management</h3>
-            <div class="faq-content">
-              <p><b>Challenge: </b> A retail chain struggled with managing customer data and tracking sales performance.</p>
+              <p><b>Solution:</b> Developed a custom software solution that automated production schedules, optimized inventory tracking and generated real-time reports.</p> 
             </div>
             <div class="faq-content">
-              <p><b>Solution: </b> Implemented a CRM system that centralized customer data, streamlined sales processes and provided actionable insights through data analytics.</p> 
-            </div>
-            <div class="faq-content">
-              <p><b>Impact: </b> Increased customer retention by 20% and improved sales reporting accuracy.</p> 
+              <p><b>Impact:</b> Production downtime by 30% and increased overall operational efficiency.</p> 
             </div>
             <i class="faq-toggle bi bi-chevron-right"></i>
-          </div><!-- End case study item-->
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="faq-item mb-4">
+            <div class="d-flex align-items-center mb-2">
+              <button class="btn btn-sm btn-outline-secondary me-2 eye-btn" data-img="assets/img/fusiontec/product-3.jpg" aria-label="Preview Image">
+                <i class="bi bi-eye"></i>
+              </button>
+              <h3 class="mb-0">Case Study 2: Retail Sector – Customer Relationship Management</h3>
+            </div>
+            <div class="faq-content">
+              <p><b>Challenge:</b> A retail chain struggled with managing customer data and tracking sales performance.</p>
+            </div>
+            <div class="faq-content">
+              <p><b>Solution:</b> Implemented a CRM system that centralized customer data, streamlined sales processes and provided actionable insights through data analytics.</p> 
+            </div>
+            <div class="faq-content">
+              <p><b>Impact:</b> Increased customer retention by 20% and improved sales reporting accuracy.</p> 
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
         </div>
-      </div><!-- End case study Column-->
+      </div>
+
+      <!-- Right Column -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
         <div class="faq-container">
-          <div class="faq-item">
-            <h3>Case Study 3: Logistics & Supply Chain – Data Integration</h3>
-            <div class="faq-content">
-              <p><b>Challenge: </b> A logistics company needed to integrate disparate data systems for more accurate fleet tracking and delivery scheduling.</p>
+
+          <!-- Case Study 3 -->
+          <div class="faq-item mb-4">
+            <div class="d-flex align-items-center mb-2">
+              <button class="btn btn-sm btn-outline-secondary me-2 eye-btn" data-img="assets/img/fusiontec/product-1.jpg" aria-label="Preview Image">
+                <i class="bi bi-eye"></i>
+              </button>
+              <h3 class="mb-0">Case Study 3: Logistics & Supply Chain – Data Integration</h3>
             </div>
             <div class="faq-content">
-              <p><b>Solution: </b> We developed a comprehensive data integration platform that consolidated all operational data and provided real-time monitoring.</p> 
+              <p><b>Challenge:</b> A logistics company needed to integrate disparate data systems for more accurate fleet tracking and delivery scheduling.</p>
             </div>
             <div class="faq-content">
-              <p><b>Impact: </b> Improved delivery accuracy by 40% and reduced fuel costs by 15%.</p> 
+              <p><b>Solution:</b> We developed a comprehensive data integration platform that consolidated all operational data and provided real-time monitoring.</p> 
+            </div>
+            <div class="faq-content">
+              <p><b>Impact:</b> Improved delivery accuracy by 40% and reduced fuel costs by 15%.</p> 
             </div>
             <i class="faq-toggle bi bi-chevron-right"></i>
-          </div><!-- End case study item-->
+          </div>
+
         </div>
-      </div><!-- End case study Column-->
+      </div>
     </div>
   </div>
-</section><!-- /case study Section -->
+</section>
+<!-- Modal Image Preview -->
+<div id="imageModal" class="custom-modal d-none" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+  <div class="custom-modal-backdrop"></div>
+  <div class="custom-modal-content">
+    <button class="custom-close" aria-label="Close modal">&times;</button>
+    <img id="modalImage" src="" alt="Preview" />
+  </div>
+</div>
+
     
 
     <!-- Testimonials Section -->
@@ -629,10 +673,11 @@
             <div class="swiper-slide"><img src="assets/img/fusiontec/partner -2.jpeg" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/fusiontec/partner-3.jpg" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/fusiontec/partner-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/fusiontec/partner -1.jpeg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/fusiontec/partner-5.png" class="img-fluid" alt=""></div>
+            <!-- <div class="swiper-slide"><img src="assets/img/fusiontec/partner -1.jpeg" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/fusiontec/partner -2.jpeg" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/fusiontec/partner-3.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/fusiontec/partner-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/fusiontec/partner-4.png" class="img-fluid" alt=""></div> -->
         </div>
         <div class="swiper-pagination"></div>
       </div>

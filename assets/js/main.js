@@ -200,3 +200,37 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// for casestudy image preview
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = modal.querySelector(".custom-close");
+  const backdrop = modal.querySelector(".custom-modal-backdrop");
+
+  document.querySelectorAll(".eye-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const imgSrc = btn.getAttribute("data-img");
+      modalImg.src = imgSrc;
+      modal.classList.remove("d-none");
+      document.body.style.overflow = "hidden"; // prevent background scroll
+    });
+  });
+
+  const closeModal = () => {
+    modal.classList.add("d-none");
+    modalImg.src = "";
+    document.body.style.overflow = ""; // restore scroll
+  };
+
+  closeBtn.addEventListener("click", closeModal);
+  backdrop.addEventListener("click", closeModal);
+
+  // Optional: Close modal with Escape key
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && !modal.classList.contains("d-none")) {
+      closeModal();
+    }
+  });
+});
