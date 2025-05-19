@@ -208,29 +208,85 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalImg = document.getElementById("modalImage");
   const closeBtn = modal.querySelector(".custom-close");
   const backdrop = modal.querySelector(".custom-modal-backdrop");
+  const downloadBtn = document.getElementById("downloadImage");
 
   document.querySelectorAll(".eye-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const imgSrc = btn.getAttribute("data-img");
       modalImg.src = imgSrc;
+      downloadBtn.href = imgSrc;
       modal.classList.remove("d-none");
-      document.body.style.overflow = "hidden"; // prevent background scroll
+      document.body.style.overflow = "hidden";
     });
   });
 
   const closeModal = () => {
     modal.classList.add("d-none");
     modalImg.src = "";
-    document.body.style.overflow = ""; // restore scroll
+    document.body.style.overflow = "";
+    modalImg.style.transform = "scale(1)";
+    modalImg.style.transformOrigin = "center";
+    modalImg.style.cursor = "zoom-in";
+    zoomed = false;
   };
 
   closeBtn.addEventListener("click", closeModal);
   backdrop.addEventListener("click", closeModal);
 
-  // Optional: Close modal with Escape key
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && !modal.classList.contains("d-none")) {
       closeModal();
     }
   });
+
+  // Zoom functionality with click-point focus
+  let zoomed = false;
+  modalImg.addEventListener("click", (e) => {
+    const rect = modalImg.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const offsetY = e.clientY - rect.top;
+
+    const xPercent = (offsetX / modalImg.width) * 100;
+    const yPercent = (offsetY / modalImg.height) * 100;
+
+    if (!zoomed) {
+      modalImg.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+      modalImg.style.transform = "scale(2.5)";
+      modalImg.style.cursor = "zoom-out";
+    } else {
+      modalImg.style.transformOrigin = "center";
+      modalImg.style.transform = "scale(1)";
+      modalImg.style.cursor = "zoom-in";
+    }
+    zoomed = !zoomed;
+  });
 });
+// javaScript for Runtime Validation
+
+                                // Subject limit
+                                document.getElementById('subject').addEventListener('input', function () {
+                                  if (this.value.length > 50) {
+                                    this.value = this.value.slice(0, 50);
+                                  }
+                                });
+                              
+                                // Phone: digits only, max 10
+                                document.getElementById('phone').addEventListener('input', function () {
+                                  this.value = this.value.replace(/\D/g, '').slice(0, 10);
+                                });
+                              
+                                // Name: allow only letters and space
+                                document.getElementById('name').addEventListener('input', function () {
+                                  this.value = this.value.replace(/[^A-Za-z\s]/g, '').slice(0, 100);
+                                });
+                              
+                                // Message: max 1000 characters
+                                document.getElementById('message').addEventListener('input', function () {
+                                  if (this.value.length > 1000) {
+                                    this.value = this.value.slice(0, 1000);
+                                  }
+                                });
+                              
+                                // Email: no JS validation required (HTML5 handles it)
+                        
+                              
