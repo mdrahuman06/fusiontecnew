@@ -48,9 +48,18 @@
             </ul>
           </li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#faq">F.A.Q</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#recent-posts">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#features">Our Mission</a></li>
+              <li><a href="#call-to-action">Our Vision</a></li>
+              <li><a href="#alt-features">Quality Policy</a></li>
+              <li><a href="#faq">F.A.Q</a></li>
+              <li><a href="#case_study">Case Study</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#clients">Partners</a></li>
+              <li><a href="#recent-posts">Blog</a></li>
+            </ul>
+          </li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li class="dropdown"><a href="#"><span>Download Brochure</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -296,8 +305,10 @@
                 </div><!-- End Feature Item -->
               </div>
             </div>
-            <div class="col-xl-5 d-flex align-items-center order-1 order-xl-2 quality_policys_img" data-aos="fade-up" data-aos-delay="100">
+            <div class="quality_policys_img">
+            <div class="col-xl-5 d-flex align-items-center order-1 order-xl-2 " data-aos="fade-up" data-aos-delay="100">
               <img src="assets/img/values-3.png" class="img-fluid" alt="">
+            </div>
             </div>
           </div>
         </div>
@@ -403,7 +414,7 @@
     </section><!-- /Faq Section -->
 
     <!-- Case Study Section -->
-<section id="faq" class="faq section py-4">
+<section id="case_study" class="faq section py-4">
   <div class="container section-title" data-aos="fade-up">
     <h2>Case Study</h2>
     <p>At Fusiontec Software, we have successfully delivered impactful software solutions that address the unique challenges faced by our clients. Here are some of our recent success stories:</p>
@@ -633,55 +644,48 @@
         <h2>Partners</h2>
         <p>We Collab with best Partners<br></p>
       </div><!-- End Section Title -->
+
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/fusiontec/partner -1.jpeg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/fusiontec/partner -2.jpeg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/fusiontec/partner-3.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/fusiontec/partner-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/fusiontec/partner-5.png" class="img-fluid" alt=""></div>
-            <!-- <div class="swiper-slide"><img src="assets/img/fusiontec/partner -1.jpeg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/fusiontec/partner -2.jpeg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/fusiontec/partner-3.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/fusiontec/partner-4.png" class="img-fluid" alt=""></div> -->
+        <div class="row d-none d-md-flex justify-content-center align-items-center">
+          <!-- Horizontal layout for md and up -->
+          <div class="col-md-3 col-sm-4 col-6 mb-4">
+            <img src="assets/img/fusiontec/partner -1.jpeg" class="img-fluid" alt="Partner 1">
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-4">
+            <img src="assets/img/fusiontec/partner -2.jpeg" class="img-fluid" alt="Partner 2">
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-4">
+            <img src="assets/img/fusiontec/partner-3.jpg" class="img-fluid" alt="Partner 3">
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-4">
+            <img src="assets/img/fusiontec/partner-4.png" class="img-fluid" alt="Partner 4">
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-4">
+            <img src="assets/img/fusiontec/partner-5.png" class="img-fluid" alt="Partner 5">
+          </div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
-    </section><!-- /Clients Section -->
+
+        <!-- Vertical layout for mobile and tablet -->
+        <div class="d-md-none">
+          <div class="mb-4 text-center">
+            <img src="assets/img/fusiontec/partner -1.jpeg" class="img-fluid w-75 mx-auto" alt="Partner 1">
+          </div>
+          <div class="mb-4 text-center">
+            <img src="assets/img/fusiontec/partner -2.jpeg" class="img-fluid w-75 mx-auto" alt="Partner 2">
+          </div>
+          <div class="mb-4 text-center">
+            <img src="assets/img/fusiontec/partner-3.jpg" class="img-fluid w-75 mx-auto" alt="Partner 3">
+          </div>
+          <div class="mb-4 text-center">
+            <img src="assets/img/fusiontec/partner-4.png" class="img-fluid w-75 mx-auto" alt="Partner 4">
+          </div>
+          <div class="mb-4 text-center">
+            <img src="assets/img/fusiontec/partner-5.png" class="img-fluid w-75 mx-auto" alt="Partner 5">
+          </div>
+        </div>
+
+    <!-- /Partners Section -->
 
     <!-- Recent Posts Section -->
     <section id="recent-posts" class="recent-posts section">
