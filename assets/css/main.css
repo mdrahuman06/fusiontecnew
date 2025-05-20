@@ -183,7 +183,7 @@ h6 {
 
 /* Topbar */
 .topbar {
-  background-color: var(--accent-color);
+  background-color: #263A85;
   color: var(--contrast-color);
   font-size: 14px;
   padding: 8px 20px;
