@@ -211,30 +211,37 @@ h6 {
   z-index: 997; /* Make sure it's below topbar */
 }
 
-/* client scroll horizontally */
-
+/* client scroll section */
+/* Scroll Container */
 .client-scroll-container {
   overflow: hidden;
   position: relative;
   width: 100%;
+  padding: 1rem 0;
 }
 
+/* Track that scrolls */
 .client-scroll-track {
   display: flex;
   gap: 3rem;
+  width: max-content;
   animation: scroll-left 30s linear infinite;
 }
 
+/* Client Images */
 .client-scroll-track img {
-  max-height: 60px;
+  max-height: 100px;
   flex-shrink: 0;
   transition: transform 0.3s ease;
+  display: block;
 }
 
+/* Hover effect */
 .client-scroll-track img:hover {
   transform: scale(1.1);
 }
 
+/* Scroll Keyframes */
 @keyframes scroll-left {
   0% {
     transform: translateX(0%);
@@ -244,9 +251,19 @@ h6 {
   }
 }
 
+/* Tablet Speed */
+@media (max-width: 992px) {
+  .client-scroll-track {
+    animation: scroll-left 20s linear infinite;
+  }
+}
 
-
-
+/* Mobile Speed */
+@media (max-width: 576px) {
+  .client-scroll-track {
+    animation: scroll-left 15s linear infinite;
+  }
+}
 
 /* css for image preview */
 /* Modal Styles */
